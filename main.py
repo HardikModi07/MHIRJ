@@ -594,7 +594,7 @@ async def generateReport(analysisType: str, occurences: int, legs: int, intermit
             by=["Date", "Type", "Priority"])
 
         OutputTableDaily_json = OutputTableDaily.to_json(orient = 'records')
-        OutputTableDaily.to_csv("OutputTableDaily.csv")
+        #OutputTableDaily.to_csv("OutputTableDaily.csv")
 
         return OutputTableDaily_json
 
@@ -916,7 +916,7 @@ async def generateReport(analysisType: str, occurences: int, legs: int, intermit
         global OutputTableHistory
         OutputTableHistory = pd.DataFrame(data=MAINtable_array, columns=TitlesArrayHistory).fillna(" ").sort_values(
             by=["Type", "Priority"])
-        OutputTableHistory.to_csv("OutputTableHistory.csv")
+        #OutputTableHistory.to_csv("OutputTableHistory.csv")
         OutputTableHistory_json = OutputTableHistory.to_json(orient = 'records')
         return OutputTableHistory_json
 
